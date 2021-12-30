@@ -16,8 +16,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -30,20 +28,18 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+#### Desktop view
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![](./assets/screenshots/screenshot-desktop-view.png)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+#### Mobile view
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./assets/screenshots/screenshot-mobile-view.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/siladikarlo856/frontendmentor-tip-calculator-app](https://github.com/siladikarlo856/frontendmentor-tip-calculator-app)
+- Live Site URL: [https://siladikarlo856.github.io/frontendmentor-tip-calculator-app/](https://siladikarlo856.github.io/frontendmentor-tip-calculator-app/)
 
 ## My process
 
@@ -53,60 +49,77 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Responsive design
+- Vanilla JavaScript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learned how to add custom outline color on text input field:
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.input-text:active,
+.input-text:focus {
+  outline-color: var(--strong-cyan);
 }
 ```
+
+I learnd how to make a button that stays selected after you click on it. For that I used element id which can be determined on user click event.
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+function tipValueUpdate(e) {
+    const id = e.target.id;
+    switch(id) {
+        case "fivePercentTip":
+            selectedTip = 5;
+            unselectAll();
+            fivePercentTipBtn.classList.add("tip-btn-selected");
+    ...
 }
+
+// event listeber
+fivePercentTipBtn.addEventListener('click', tipValueUpdate);
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+I learned how to get value from the input text field after user change it. For that I used 'change' event listener and value can be read using e.target.value.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```js
+function totalBillUpdate(e) {
+  billValue = parseFloat(e.target.value);
+}
+
+// Event listener
+billValueEl.addEventListener("change", totalBillUpdate);
+```
+
+I learned how to take care of different datatypes and how to round up numbers to be able to show it on UI.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+For future updates I will refactor this project using SCSS and one of frontend frameworks (React, Angular,...)
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [HTMLElement: change event](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event) - This helped me to figure out how to grab user input value on change event
+- [JavaScript Switch Statement](https://www.w3schools.com/js/js_switch.asp) - This one helped me to write DRY code.
+- [typeof operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) - This helped me during development
+- [parseInt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+- [parseFloar()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Karlo Siladi](http://karlo-siladi.from.hr/)
+- Frontend Mentor - [@siladikarlo856](https://www.frontendmentor.io/profile/siladikarlo856)
+- LinkedIn - [Karlo Siladi](https://www.linkedin.com/in/karlosiladi/)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+- MDN Web Docs
+- W3 schools
+- Kevin Powell CSS Youtube channel
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+## ToDo
+
+- add icon for bill
+- add icon for peoples
+- disable reset button when nothing is entered
+- add input check and warning message

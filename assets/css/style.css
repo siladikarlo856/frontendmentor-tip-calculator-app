@@ -250,4 +250,13 @@ h1 {
     color: var(--strong-cyan);
     font-weight: 800;
   }
+
+  .input-text:active,
+  .input-text:focus,
+  .select-tip-txt:active,
+  .select-tip-txt:focus {
+    outline-color: var(--strong-cyan);
+    text-align: right;
+    padding: 0.3rem;
+  }
 }
