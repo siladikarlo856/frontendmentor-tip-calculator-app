@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="main-container">
+        <div class="title-container">
+          <h1><span>SPLI</span><span>TTER</span></h1>
+        </div>
+
+        <div class="calc-container">
+          <div class="left-container">
+            <div class="bill-total-container">
+              <label for="bill-total">Bill</label>
+              <input
+                type="text"
+                id="bill-total"
+                name="bill-total"
+                placeholder="0"
+                class="input-text"
+              />
+            </div>
+            <div class="select-tip-percentage-container">
+              <p>Select Tip %</p>
+              <div class="percetnage-container">
+                <button class="select-tip-btn">5%</button>
+                <button class="select-tip-btn">10%</button>
+                <button class="select-tip-btn">15%</button>
+                <button class="select-tip-btn">25%</button>
+                <button class="select-tip-btn">50%</button>
+                <input type="text" value="Custom" class="select-tip-txt"/>
+                <!-- <input type="text" placeholder="Custom" /> -->
+              </div>
+            </div>
+            <div class="people-number-container">
+              <label for="people-number">Number of People</label>
+              <input
+                type="text"
+                id="people-number"
+                name="people-number"
+                placeholder="0"
+                class="input-text"
+              />
+            </div>
+          </div>
+          <div class="right-container">
+            <div class="text-content">
+              <div class="tip-amount-container">
+                <div class="text">
+                  <span class="price-title">Tip Amount</span>
+                  <span class="price-subtitle">/ person</span>
+                </div>
+                <div class="tip-amount price" id="tipAmount">$4.27</div>
+              </div>
+              <div class="total-container">
+                <div class="text">
+                  <span class="price-title">Total</span>
+                  <span class="price-subtitle">/ person</span>
+                </div>
+                <div class="total price" id="total">$32.79</div>
+              </div>
+            </div>
+            <button id="resetButton" class="reset-button">RESET</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Karlo Siladi</a>.
+    </footer>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

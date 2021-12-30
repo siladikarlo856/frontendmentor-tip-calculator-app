@@ -1,0 +1,216 @@
+/* VARIABLES */
+
+/* Import variables scc file */
+@import url(./variables.css);
+
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font: inherit;
+}
+
+img {
+  display: block;
+}
+
+a,
+span {
+  display: inline-block;
+}
+
+/* Style */
+
+html,
+body {
+  font-family: "Space Mono", sans-serif;
+  font-weight: 700;
+  color: var(--dark-grayish-cyan);
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--light-grayish-cyan);
+  min-height: 80vh;
+  min-width: 375px;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.25em;
+}
+
+.calc-container {
+  display: flex;
+  flex-flow: row wrap;
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 15px;
+  width: 95%;
+  max-width: 840px;
+  gap: 20px;
+}
+
+.left-container,
+.right-container {
+  flex: 1 1 45%;
+  padding: 1rem 2rem;
+  min-width: 350px;
+}
+
+.bill-total-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.input-text {
+  border: none;
+  background: var(--light-grayish-cyan2);
+  text-align: right;
+  padding: 0.2em 0.7em;
+  font-size: var(--form-input-fs);
+  border-radius: 5px;
+  width: 100%;
+}
+
+.input-text:active,
+.input-text:focus {
+  outline-color: var(--strong-cyan);
+}
+
+.percetnage-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.select-tip-btn {
+  background-color: var(--very-dark-cyan);
+  color: white;
+  border-radius: 5px;
+  font-size: var(--form-input-fs);
+  font-weight: 600;
+  padding: 0.3rem;
+}
+
+.select-tip-btn:hover {
+  background-color: var(--strong-cyan);
+
+}
+
+.select-tip-txt {
+  border: none;
+  background: var(--light-grayish-cyan2);
+  color: var(--dark-grayish-cyan);
+  text-align: center;
+  font-size: var(--form-input-fs);
+  border-radius: 5px;
+}
+
+.select-tip-percentage-container {
+  margin-bottom: 1.5rem;
+}
+
+.select-tip-percentage-container p {
+  margin-bottom: 0.8rem;
+}
+
+.people-number-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-container {
+  background: var(--very-dark-cyan);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.tip-amount-container,
+.total-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.tip-amount-container .text,
+.total-container .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-title {
+  color: var(--white);
+}
+
+.price-subtitle {
+  color: var(--dark-grayish-cyan);
+}
+
+.price {
+  font-size: 2.25rem;
+  color: var(--strong-cyan);
+  font-weight: 800;
+}
+
+.reset-button {
+  background: var(--strong-cyan);
+  border-radius: 5px;
+  padding: 0.5em;
+  font-weight: 600;
+  color: var(--very-dark-cyan);
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
