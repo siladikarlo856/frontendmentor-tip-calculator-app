@@ -70,6 +70,7 @@ body {
   background: var(--light-grayish-cyan);
   min-height: 80vh;
   min-width: 375px;
+  box-shadow: 0px 10px 10px 7px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -88,7 +89,7 @@ h1 {
   border-radius: 15px;
   width: 95%;
   max-width: 840px;
-  gap: 5px;
+  box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .left-container,
@@ -98,7 +99,7 @@ h1 {
   min-width: 350px;
 }
 
-.bill-total-container {
+.bill-value-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
@@ -120,6 +121,7 @@ h1 {
 .select-tip-txt:focus {
   outline-color: var(--strong-cyan);
   text-align: right;
+  padding: 0.3rem;
 }
 
 .percetnage-container {
@@ -142,13 +144,17 @@ h1 {
   color: var(--very-dark-cyan);
 }
 
+.tip-btn-selected {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
 .select-tip-txt {
   border: none;
   background: var(--light-grayish-cyan2);
   text-align: center;
   font-size: var(--form-input-fs);
   border-radius: 5px;
-  padding: 0.3rem;
 }
 
 .select-tip-percentage-container {
@@ -220,4 +226,28 @@ h1 {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --form-input-fs: 18px;
+  }
+
+  .calc-container {
+    width: 100vw;
+  }
+
+  .left-container,
+  .right-container {
+    flex: 1 1 50%;
+    padding: 1rem 1.5rem;
+    min-width: 280px;
+    font-size: 0.8rem;
+  }
+
+  .price {
+    font-size: 2rem;
+    color: var(--strong-cyan);
+    font-weight: 800;
+  }
 }

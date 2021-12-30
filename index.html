@@ -25,12 +25,12 @@
 
         <div class="calc-container">
           <div class="left-container">
-            <div class="bill-total-container">
-              <label for="bill-total">Bill</label>
+            <div class="bill-value-container">
+              <label for="bill-value">Bill</label>
               <input
                 type="text"
-                id="bill-total"
-                name="bill-total"
+                id="bill-value"
+                name="bill-value"
                 placeholder="0"
                 class="input-text"
               />
@@ -38,12 +38,21 @@
             <div class="select-tip-percentage-container">
               <p>Select Tip %</p>
               <div class="percetnage-container">
-                <button class="select-tip-btn">5%</button>
-                <button class="select-tip-btn">10%</button>
-                <button class="select-tip-btn">15%</button>
-                <button class="select-tip-btn">25%</button>
-                <button class="select-tip-btn">50%</button>
-                <input type="text" class="select-tip-txt" placeholder="Custom"/>
+                <button class="select-tip-btn" id="fivePercentTip">5%</button>
+                <button class="select-tip-btn" id="tenPercentTip">10%</button>
+                <button class="select-tip-btn" id="fifteenPercentTip">
+                  15%
+                </button>
+                <button class="select-tip-btn" id="twentyfivePercentTip">
+                  25%
+                </button>
+                <button class="select-tip-btn" id="fiftyPercentTip">50%</button>
+                <input
+                  type="text"
+                  class="select-tip-txt"
+                  placeholder="Custom"
+                  id="customTip"
+                />
                 <!-- <input type="text" placeholder="Custom" /> -->
               </div>
             </div>
@@ -65,14 +74,16 @@
                   <span class="price-title">Tip Amount</span>
                   <span class="price-subtitle">/ person</span>
                 </div>
-                <div class="tip-amount price" id="tipAmount">$4.27</div>
+                <div class="tip-amount price">
+                  $<span id="tipAmount">0.00</span>
+                </div>
               </div>
               <div class="total-container">
                 <div class="text">
                   <span class="price-title">Total</span>
                   <span class="price-subtitle">/ person</span>
                 </div>
-                <div class="total price" id="total">$32.79</div>
+                <div class="total price">$<span id="total">0.00</span></div>
               </div>
             </div>
             <button id="resetButton" class="reset-button">RESET</button>
