@@ -88,7 +88,7 @@ h1 {
   border-radius: 15px;
   width: 95%;
   max-width: 840px;
-  gap: 20px;
+  gap: 5px;
 }
 
 .left-container,
@@ -115,8 +115,11 @@ h1 {
 }
 
 .input-text:active,
-.input-text:focus {
+.input-text:focus,
+.select-tip-txt:active,
+.select-tip-txt:focus {
   outline-color: var(--strong-cyan);
+  text-align: right;
 }
 
 .percetnage-container {
@@ -135,17 +138,17 @@ h1 {
 }
 
 .select-tip-btn:hover {
-  background-color: var(--strong-cyan);
-
+  background-color: hsla(172, 67%, 45%, 0.5);
+  color: var(--very-dark-cyan);
 }
 
 .select-tip-txt {
   border: none;
   background: var(--light-grayish-cyan2);
-  color: var(--dark-grayish-cyan);
   text-align: center;
   font-size: var(--form-input-fs);
   border-radius: 5px;
+  padding: 0.3rem;
 }
 
 .select-tip-percentage-container {
@@ -204,6 +207,10 @@ h1 {
   padding: 0.5em;
   font-weight: 600;
   color: var(--very-dark-cyan);
+}
+
+.reset-button:hover {
+  background-color: var(--light-grayish-cyan);
 }
 
 /* Footer */
