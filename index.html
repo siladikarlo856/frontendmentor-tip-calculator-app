@@ -27,6 +27,11 @@
           <div class="left-container">
             <div class="bill-value-container">
               <label for="bill-value">Bill</label>
+              <img
+                src="assets/images/icon-dollar.svg"
+                alt="dolar icon"
+                id="dolarIcon"
+              />
               <input
                 type="text"
                 id="bill-value"
@@ -57,7 +62,17 @@
               </div>
             </div>
             <div class="people-number-container">
-              <label for="people-number">Number of People</label>
+              <div class="people-text-container">
+                <div class="invalid-input-text" id="invalidInputText">
+                  Can't be zero
+                </div>
+                <label for="people-number">Number of People</label>
+              </div>
+              <img
+                src="assets/images/icon-person.svg"
+                alt="Person icon"
+                id="personIcon"
+              />
               <input
                 type="text"
                 id="people-number"
@@ -86,7 +101,14 @@
                 <div class="total price">$<span id="total">0.00</span></div>
               </div>
             </div>
-            <button id="resetButton" class="reset-button">RESET</button>
+            <button
+              type="button"
+              id="resetButton"
+              class="reset-button"
+              disabled
+            >
+              RESET
+            </button>
           </div>
         </div>
       </div>

@@ -124,6 +124,19 @@ h1 {
   padding: 0.3rem;
 }
 
+.invalid-zero,
+.invalid-zero:active,
+.invalid-zero:focus {
+  outline-color: red;
+  border: 2px solid red;
+}
+
+.invalid-input-text {
+  color: red;
+  font-size: 0.75rem;
+  opacity: 0;
+}
+
 .percetnage-container {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -168,6 +181,21 @@ h1 {
 .people-number-container {
   display: flex;
   flex-direction: column;
+}
+
+.people-text-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bill-value-container img,
+.people-number-container img {
+  width: 10px;
+  position: relative;
+  top: 30px;
+  left: 10px;
 }
 
 .right-container {
@@ -217,6 +245,14 @@ h1 {
 
 .reset-button:hover {
   background-color: var(--light-grayish-cyan);
+}
+
+.reset-button:disabled, 
+.reset-button[disabled],
+.reset-button:disabled .reset-button:hover{
+  cursor: auto;
+  background-color: var(--strong-cyan);
+  filter: opacity(0.5);
 }
 
 /* Footer */

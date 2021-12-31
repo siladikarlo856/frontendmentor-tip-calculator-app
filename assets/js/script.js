@@ -9,6 +9,7 @@ const numberOfPeopleEl = document.getElementById('people-number');
 const tipPerPersonEl = document.getElementById('tipAmount');
 const totalPerPersonEl = document.getElementById('total');
 const resetBtn = document.getElementById("resetButton");
+const invalidInputTextEl = document.getElementById("invalidInputText");
 
 
 let billValue = 0;
@@ -23,6 +24,9 @@ function updateTipDOMElements() {
 }
 
 function calculateTip() {
+    // there is an input - enable reset button
+    resetBtn.disabled = false;
+
     // check all parameters
     if(billValue === 0 || selectedTip === 0 || numberOfPeople === 0) {
         return;
@@ -101,13 +105,21 @@ function tipValueUpdate(e) {
 }
 
 function numberOfPeopleUpdate(e) {
-    numberOfPeople =  parseInt(e.target.value)
-
-    if(numberOfPeople < 0) {
-        numberOfPeople = 0;
-    }
-    numberOfPeopleEl.value = numberOfPeople;
+    numberOfPeople =  parseInt(e.target.value);
     
+    if(numberOfPeople === 0) {
+        console.log("Can't be zero");
+        // invalid
+        numberOfPeopleEl.classList.add("invalid-zero");
+        invalidInputTextEl.style.opacity = 1;
+    } else {
+        // valid
+        numberOfPeopleEl.classList.remove("invalid-zero");
+        invalidInputTextEl.style.opacity = 0;
+    }
+
+
+    numberOfPeopleEl.value = numberOfPeople;    
     calculateTip();
 }
 
@@ -123,6 +135,8 @@ function resetValues() {
     resetInputElements();
     unselectAll();
     updateTipDOMElements();
+
+    resetBtn.disabled = true;
 }
 
 
