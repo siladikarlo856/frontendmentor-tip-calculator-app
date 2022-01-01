@@ -103,7 +103,8 @@ For future updates I will refactor this project using SCSS and one of frontend f
 - [JavaScript Switch Statement](https://www.w3schools.com/js/js_switch.asp) - This one helped me to write DRY code.
 - [typeof operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) - This helped me during development
 - [parseInt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
-- [parseFloar()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)
+- [parseFloat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)
+- [Changing HTML Style](https://www.w3schools.com/js/js_htmldom_css.asp) - this helped me to style a HTML element from JavaScript file
 
 ## Author
 

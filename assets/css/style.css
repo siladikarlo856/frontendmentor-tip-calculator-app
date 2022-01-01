@@ -247,9 +247,9 @@ h1 {
   background-color: var(--light-grayish-cyan);
 }
 
-.reset-button:disabled, 
+.reset-button:disabled,
 .reset-button[disabled],
-.reset-button:disabled .reset-button:hover{
+.reset-button:disabled .reset-button:hover {
   cursor: auto;
   background-color: var(--strong-cyan);
   filter: opacity(0.5);
@@ -294,5 +294,13 @@ h1 {
     outline-color: var(--strong-cyan);
     text-align: right;
     padding: 0.3rem;
+  }
+
+  .bill-value-container img,
+  .people-number-container img {
+    width: 10px;
+    position: relative;
+    top: 25px;
+    left: 10px;
   }
 }
